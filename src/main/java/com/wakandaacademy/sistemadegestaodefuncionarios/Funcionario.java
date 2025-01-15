@@ -74,7 +74,7 @@ public class Funcionario {
         this.endereco = endereco;
     }
 
-    // Equals e HashCode (opcional, caso necessário)
+    // Equals e HashCode
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
