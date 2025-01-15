@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://allanbrenogomesdias:tyo91rOblsy6dTxy@cluster0.klvdq.mongodb.net/Cluster0?retryWrites=true&w=majority&appName=Cluster0 # URL do MongoDB
+      database: sistemadegestaodefuncionarios # Nome do banco de dados
+
+server:
+  port: 8080 # Porta do servidor Spring Boot
+
+logging:
+  level:
+    root: INFO # Nível de log padrão
+    org.springframework.data.mongodb: DEBUG # Nível de log específico para MongoDB
