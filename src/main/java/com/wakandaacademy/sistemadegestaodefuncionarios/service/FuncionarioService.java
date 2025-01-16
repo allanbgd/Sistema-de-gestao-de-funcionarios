@@ -1,8 +1,13 @@
-package com.wakandaacademy.sistemadegestaodefuncionarios;
+package com.wakandaacademy.sistemadegestaodefuncionarios.service;
 
-import org.bson.types.ObjectId;
+import org.bson.types.ObjectId; // Para ObjectId
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.wakandaacademy.sistemadegestaodefuncionarios.domain.Funcionario;
+import com.wakandaacademy.sistemadegestaodefuncionarios.exception.FuncionarioNotFoundException;
+import com.wakandaacademy.sistemadegestaodefuncionarios.repository.FuncionarioRepository;
 
 import java.util.List;
 
@@ -20,10 +25,12 @@ public class FuncionarioService {
     }
 
     // Método para buscar um funcionário
-    public Funcionario buscarFuncionario(String id) {
-        ObjectId objectId = new ObjectId(id);
-        return repository.findById(objectId).orElseThrow(() -> new FuncionarioNotFoundException(id));
-    }
+ public Funcionario buscarFuncionario(String id) {
+    // Convert ObjectId to String if necessary
+    ObjectId objectId = new ObjectId(id);
+    return repository.findById(objectId.toHexString()).orElseThrow(() -> new FuncionarioNotFoundException(id));
+}
+
 
     // Método para listar todos os funcionários
     public List<Funcionario> listarFuncionarios() {

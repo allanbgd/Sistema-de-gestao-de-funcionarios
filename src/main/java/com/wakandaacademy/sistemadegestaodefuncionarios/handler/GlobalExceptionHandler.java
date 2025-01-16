@@ -1,9 +1,11 @@
-package com.wakandaacademy.sistemadegestaodefuncionarios;
+package com.wakandaacademy.sistemadegestaodefuncionarios.handler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import com.wakandaacademy.sistemadegestaodefuncionarios.exception.FuncionarioNotFoundException;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {

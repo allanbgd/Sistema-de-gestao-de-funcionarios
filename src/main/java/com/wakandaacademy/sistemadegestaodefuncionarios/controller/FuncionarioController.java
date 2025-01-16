@@ -1,7 +1,10 @@
-package com.wakandaacademy.sistemadegestaodefuncionarios;
+package com.wakandaacademy.sistemadegestaodefuncionarios.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import com.wakandaacademy.sistemadegestaodefuncionarios.domain.Funcionario;
+import com.wakandaacademy.sistemadegestaodefuncionarios.service.FuncionarioService;
 
 import java.util.List;
 

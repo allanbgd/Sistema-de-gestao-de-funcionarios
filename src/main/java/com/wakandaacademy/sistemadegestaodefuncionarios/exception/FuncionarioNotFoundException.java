@@ -1,4 +1,4 @@
-package com.wakandaacademy.sistemadegestaodefuncionarios;
+package com.wakandaacademy.sistemadegestaodefuncionarios.exception;
 
 public class FuncionarioNotFoundException extends RuntimeException {
     public FuncionarioNotFoundException(String id) {
